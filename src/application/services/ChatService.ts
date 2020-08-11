@@ -29,7 +29,7 @@ export default class ChatService {
   }
 
   private _getUrlWithName (url: string, name: string) {
-    return url.replace('{NAME}', encodeURI(name))
+    return url.replace('{NAME}', encodeURIComponent(name))
   }
 
   private _connect (url: string, onOpenCallback: () => any): void {
