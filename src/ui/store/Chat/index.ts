@@ -52,6 +52,12 @@ const actions = {
 
   onMessage (context: ActionContext<ChatState, RootState>, message: MessageModel) {
     context.commit('addMessage', message)
+  },
+
+  getWebSocketConnectionURL (context: ActionContext<ChatState, RootState>) {
+    return new Promise((resolve) => {
+      resolve(chatService.getWebSocketConnectionUrl())
+    })
   }
 }
 

@@ -24,6 +24,10 @@ export default class ChatService {
     this.provider.handleMessage(callback)
   }
 
+  public getWebSocketConnectionUrl (): string {
+    return configService.getWebSocketUrl()
+  }
+
   private _getUrlWithName (url: string, name: string) {
     return url.replace('{NAME}', encodeURI(name))
   }
