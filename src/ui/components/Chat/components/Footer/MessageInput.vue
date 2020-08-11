@@ -6,6 +6,7 @@
         v-model="message"
         ref="messageTextArea"
         placeholder="Сообщение..."
+        maxlength="1000"
         @keydown.enter.exact.prevent
         @keyup.enter.exact="sendMessage"></textarea>
     </div>

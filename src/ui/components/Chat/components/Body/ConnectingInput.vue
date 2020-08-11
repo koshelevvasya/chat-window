@@ -8,6 +8,7 @@
         type="text"
         class="form-control w-100 name"
         :class="{ 'is-invalid' : errorName }"
+        maxlength="50"
         @change="$emit('update', $event.target.value)"
         @keypress="$emit('update', $event.target.value)"
         @keyup.enter="$emit('connect')"

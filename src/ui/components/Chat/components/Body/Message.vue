@@ -1,11 +1,9 @@
 <template>
-  <div :class="message.getType() + '-message'">
+  <div :class="message.getType() + '-message'" style="word-wrap: break-word;">
     <div :class="message.getType() + '-message-header'">
       {{ message.getSenderName() }}, {{ message.getCreated() }}
     </div>
-    <div :class="message.getType() + '-message-body'">
-      {{ message.getMessage() }}
-    </div>
+    <div :class="message.getType() + '-message-body'" style="white-space: pre-wrap;">{{ message.getMessage() }}</div>
   </div>
 </template>
 
