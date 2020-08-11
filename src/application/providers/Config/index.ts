@@ -1,4 +1,4 @@
-declare const getAppConfig: () => any 
+declare const getAppConfig: () => any
 
 class ConfigProvider {
   get (): any {
